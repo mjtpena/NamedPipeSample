@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedPipeServerSample", "NamedPipeServerSample\NamedPipeServerSample.csproj", "{E193EAEE-EEFF-41A3-A614-012EC90043FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedPipeClientService", "NamedPipeClientService\NamedPipeClientService.csproj", "{A48891A0-3BF2-4761-AFC7-3F52DF392466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedPipeServerService", "NamedPipeServerService\NamedPipeServerService.csproj", "{24EBEE64-8577-4130-9605-E34B43D0A461}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E193EAEE-EEFF-41A3-A614-012EC90043FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E193EAEE-EEFF-41A3-A614-012EC90043FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E193EAEE-EEFF-41A3-A614-012EC90043FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E193EAEE-EEFF-41A3-A614-012EC90043FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A48891A0-3BF2-4761-AFC7-3F52DF392466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A48891A0-3BF2-4761-AFC7-3F52DF392466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A48891A0-3BF2-4761-AFC7-3F52DF392466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A48891A0-3BF2-4761-AFC7-3F52DF392466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24EBEE64-8577-4130-9605-E34B43D0A461}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EBEE64-8577-4130-9605-E34B43D0A461}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EBEE64-8577-4130-9605-E34B43D0A461}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EBEE64-8577-4130-9605-E34B43D0A461}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
