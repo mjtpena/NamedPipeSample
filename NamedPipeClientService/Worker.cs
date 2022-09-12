@@ -25,14 +25,11 @@ public class Worker : BackgroundService
 
             _logger.LogInformation("Connected to pipe.");
 
-            using (var sr = new StreamReader(pipeClient))
+            using var sr = new StreamReader(pipeClient);
+            string? temp;
+            while ((temp = sr.ReadLine()) != null)
             {
-                // Display the read text to the console
-                string? temp;
-                while ((temp = sr.ReadLine()) != null)
-                {
-                    _logger.LogInformation("Received from server: {0}", temp);
-                }
+                _logger.LogInformation("Received from server: {0}", temp);
             }
             
             await Task.Delay(10000, stoppingToken);
