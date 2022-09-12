@@ -18,26 +18,26 @@ public class Worker : BackgroundService
             _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
 
             await using var pipeServer = new NamedPipeServerStream("testpipe", PipeDirection.Out);
-            Console.WriteLine("NamedPipeServerStream object created.");
+            _logger.LogInformation("NamedPipeServerStream object created.");
 
             // Wait for a client to connect
-            Console.Write("Waiting for client connection...");
-            await pipeServer.WaitForConnectionAsync(stoppingToken);
+            _logger.LogInformation("Waiting for client connection...");
+            await pipeServer.WaitForConnectionAsync();
 
-            Console.WriteLine("Client connected.");
+            _logger.LogInformation("Client connected.");
             try
             {
                 // Read user input and send that to the client process.
                 await using var sw = new StreamWriter(pipeServer);
                 sw.AutoFlush = true;
-                Console.Write("Enter text: ");
+                _logger.LogInformation("Enter text: ");
                 sw.WriteLine(Console.ReadLine());
             }
             // Catch the IOException that is raised if the pipe is broken
             // or disconnected.
             catch (IOException e)
             {
-                Console.WriteLine("ERROR: {0}", e.Message);
+                _logger.LogInformation("ERROR: {0}", e.Message);
             }
             
             await Task.Delay(10000, stoppingToken);
